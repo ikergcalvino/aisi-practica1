@@ -5,6 +5,7 @@ source "vagrant" "aisi" {
   provider     = "XXX"
   add_force    = true
   skip_add     = true
+  template     = "provisioning/Vagrantfile.template"
 }
 
 build {

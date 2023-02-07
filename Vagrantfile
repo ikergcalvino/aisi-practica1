@@ -11,9 +11,15 @@ class VagrantPlugins::ProviderVirtualBox::Action::Network
 end
 
 Vagrant.configure("2") do |config|
-    config.vm.box = 
+    config.vm.box = XXX
     config.vm.hostname = "XXX-aisi2223-docker"
     config.vm.network "XXX", guest: XXX, host: XXX
+
+    # Configure hostmanager and vbguest plugins
+    config.hostmanager.enabled = true
+    config.hostmanager.manage_host = true
+    config.hostmanager.manage_guest = true
+    config.vbguest.auto_update = false
 
     config.vm.provider "virtualbox" do |vb|
 	vb.name = "AISI-P1-#{config.vm.hostname}"
