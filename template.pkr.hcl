@@ -13,6 +13,6 @@ build {
 
   provisioner "shell" {
     script  = "provisioning/install-docker-ubuntu.sh"
-    timeout = "XXX"
+    timeout = "10s"
   }
 }
