@@ -1,8 +1,8 @@
 source "vagrant" "aisi" {
-  communicator = "XXX"
-  source_path  = "XXX"
-  box_version  = "XXX"
-  provider     = "XXX"
+  communicator = "ssh"
+  source_path  = "ubuntu/focal64"
+  box_version  = "20230202.0.0"
+  provider     = "virtualbox"
   add_force    = true
   skip_add     = true
   template     = "provisioning/Vagrantfile.template"
@@ -11,8 +11,8 @@ source "vagrant" "aisi" {
 build {
   sources = ["source.vagrant.aisi"]
 
-  provisioner "XXX" {
-    script  = "XXX"
+  provisioner "shell" {
+    script  = "provisioning/install-docker-ubuntu.sh"
     timeout = "XXX"
   }
 }
