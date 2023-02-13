@@ -1,7 +1,8 @@
 source "vagrant" "aisi" {
   communicator = "ssh"
-  source_path  = "idc-aisi2223/focal64"
+  source_path  = "ubuntu/focal64"
   box_version  = "20230202.0.0"
+  box_name     = "idc-aisi2223/focal64"
   provider     = "virtualbox"
   add_force    = true
   skip_add     = true
